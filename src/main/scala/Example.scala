@@ -20,7 +20,32 @@ object SlickHandsOn {
   }
 
   def numAppleComputers(implicit session: Session) = {
-    2
+    ???
+  }
+
+  def sortedAppleComputers(implicit session: Session) = {
+    ???
+  }
+
+  def sortedAppleComputersRange(implicit session: Session) = {
+    ???
+  }
+
+  def insertIPhone6s(implicit session: Session) = {
+    ???
+  }
+
+  def deleteAppleComputers(implicit session: Session) = {
+    ???
+  }
+
+
+  def updateIPhone(implicit session: Session) = {
+    ???
+  }
+
+  def topLocation(implicit session: Session) = {
+    ???
   }
 
   def main(args: Array[String]) = {
@@ -28,7 +53,13 @@ object SlickHandsOn {
     db.withTransaction { implicit session =>
       val result = readInt() match {
         case 1 => computersByCompany
-	case 2 => numAppleComputers
+	      case 2 => numAppleComputers
+        case 3 => sortedAppleComputers
+        case 4 => sortedAppleComputersRange
+        case 5 => insertIPhone6s
+        case 6 => deleteAppleComputers
+        case 7 => updateIPhone
+        case 8 => topLocation
         case _ => "Invalid option"
       }
       println(result)
