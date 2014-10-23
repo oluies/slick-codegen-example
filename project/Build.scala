@@ -16,7 +16,8 @@ object myBuild extends Build {
         "com.typesafe.slick" %% "slick" % "2.1.0",
         "com.typesafe.slick" %% "slick-codegen" % "2.1.0-RC3",
         "org.slf4j" % "slf4j-nop" % "1.6.4",
-        "com.h2database" % "h2" % "1.3.170"
+        "com.h2database" % "h2" % "1.3.170",
+        "org.scalatest" %% "scalatest" % "2.2.1" % "test"
       ),
       slick <<= slickCodeGenTask, // register manual sbt command
       sourceGenerators in Compile <+= slickCodeGenTask // register automatic code generation on every compile, remove for only manual use
